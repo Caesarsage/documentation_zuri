@@ -1,4 +1,43 @@
-# ZURI CHESS DOCUMENTATION - GET SIDEBAR INFORMATION
+# ZURI CHESS DOCUMENTATION
+- GET GENERAL PLUGIN INFORMATION
+- GET SIDEBAR INFORMATION
+
+
+## ZURI CHESS DOCUMENTATION - GET GENERAL PLUGIN INFORMATION
+
+Documentation for Zuri chess plugin on getting general plugin information
+
+###  This Endpoint returns all the information for this plugin about zuri.chess plugin
+
+- Method : GET
+- Description: Return all the information for zuri.chess plugin
+
+#### URL LINK
+[https://chess.zuri.chat/api/v1/info]
+
+### Required Parameters: 
+  None
+
+### Responses
+``` sh
+Code : 200
+Description: Success, return list of plugin information in JSON object format
+{
+  "message":"Plugin Information Retrieved",
+  "data": <Object>,
+  "success": true
+}
+
+Code : 500
+Description: Server Error, Could not fetch plugin information
+{
+  "message":"",
+  "data":null,
+  "success": false
+}
+```
+
+## ZURI CHESS DOCUMENTATION - GET SIDEBAR INFORMATION
 
 Documentation for Zuri chess plugin on getting sidebar information
 
@@ -19,26 +58,11 @@ Documentation for Zuri chess plugin on getting sidebar information
 
 ### Responses
 ``` sh
-Code : 200
+Code : 200,
 Description: Success, return list of sidebar information in JSON object format
 {
   "message":"Fetched sidebar data",
-  "data": {
-    name : string,
-    description : string,
-    plugin_id : string,
-    organisation_id : string,
-    user_id : string,
-    group_name : string,
-    show_group : boolean,
-    joined_rooms: object,
-    public_rooms: [
-      {
-        title: string,
-        url: string,
-        icon_url: string,
-        action: string,
-      },
+  "data": <Object>,
   "success": true
 }
 
@@ -51,7 +75,7 @@ Description:Server Error, Data not available
 }
 
 Code : 500
-Description: Internal Server Error occured
+Description: Internal Server Error occurred
 {
   "message":"",
   "data":null,
