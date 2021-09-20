@@ -15,7 +15,7 @@ Documentation for Zuri chess plugin on getting sidebar information
   |------| --------- |------------ |
   | userId | string | reference a particular user
   | org | string | reference plugin organization
-  | token | integer | reference plugin token
+  | token | string | reference plugin token
 
 ### Responses
 ``` sh
@@ -24,20 +24,20 @@ Description: Success, return list of sidebar information in JSON object format
 {
   "message":"Fetched sidebar data",
   "data": {
-    name,
-    description,
-    plugin_id,
-    organisation_id,
-    user_id,
-    group_name,
-    show_group,
-    joined_rooms,
+    name : string,
+    description : string,
+    plugin_id : string,
+    organisation_id : string,
+    user_id : string,
+    group_name : string,
+    show_group : boolean,
+    joined_rooms: object,
     public_rooms: [
       {
-        title,
-        url,
-        icon_url,
-        action,
+        title: string,
+        url: string,
+        icon_url: string,
+        action: string,
       },
   "success": true
 }
